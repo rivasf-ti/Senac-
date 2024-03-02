@@ -48,7 +48,7 @@ using System;
 
             ValorFinal = Valor * Quant;
             Console.WriteLine("--------------------------------------");
-            Console.WriteLine($"TOTAL R$ {ValorFinal:0.00}");
+            Console.WriteLine("TOTAL R$ {ValorFinal:0.00}");
             Console.WriteLine("--------------------------------------");
         }
     }
