@@ -27,19 +27,19 @@ using System;
 
             switch (Cod) {
                     case 1:
-                    Valor = 4.00;
+                        Valor = 4.00;
                     break;
                     case 2:
-                    Valor = 4.50;
+                        Valor = 4.50;
                     break;
-                case 3:
-                    Valor = 5.00;
+                    case 3:
+                        Valor = 5.00;
                     break;
-                case 4:
-                    Valor = 2.00;
+                    case 4:
+                        Valor = 2.00;
                     break;
-                case 5:
-                    Valor = 1.50;
+                    case 5:
+                        Valor = 1.50;
                     break;
                 default:
                     Console.WriteLine("ESCOLHA UMA DAS OPCOES DISPONIVEIS NO CARDAPIO");
