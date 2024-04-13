@@ -1,35 +1,35 @@
-﻿using System;
+using System;
 
 
     class Program
 {
     static void Main(string[] args)
     {
-        string[] choices = { "Pedra", "Papel", "Tesoura" };
+        string[] escolha = { "Pedra", "Papel", "Tesoura" };
         Random random = new Random();
 
         Console.WriteLine("Jogo de Jokenpô (Pedra-Papel-Tesoura)");
         Console.WriteLine("Escolha: Pedra, Papel ou Tesoura");
-        string playerChoice = Console.ReadLine();
+        string jogadorEscolha = Console.ReadLine();
 
-        if (!Array.Exists(choices, element => element.Equals(playerChoice, StringComparison.OrdinalIgnoreCase)))
+        if (!Array.Exists(escolha, element => element.Equals(jogadorEscolha, StringComparison.OrdinalIgnoreCase)))
         {
             Console.WriteLine("Escolha inválida.");
             return;
         }
 
-        int computerChoiceIndex = random.Next(choices.Length);
-        string computerChoice = choices[computerChoiceIndex];
+        int computadorEscolhaIndex = random.Next(escolha.Length);
+        string computadorEscolha = escolha[computadorEscolhaIndex];
 
-        Console.WriteLine($"O computador escolheu: {computerChoice}");
+        Console.WriteLine($"O computador escolheu: {computadorEscolha}");
 
-        if (playerChoice.Equals(computerChoice, StringComparison.OrdinalIgnoreCase))
+        if (jogadorEscolha.Equals(computadorEscolha, StringComparison.OrdinalIgnoreCase))
         {
             Console.WriteLine("Empate!");
         }
-        else if (playerChoice.Equals("Pedra", StringComparison.OrdinalIgnoreCase) && computerChoice == "Tesoura" ||
-                 playerChoice.Equals("Papel", StringComparison.OrdinalIgnoreCase) && computerChoice == "Pedra" ||
-                 playerChoice.Equals("Tesoura", StringComparison.OrdinalIgnoreCase) && computerChoice == "Papel")
+      else if (jogadorEscolha.Equals("Pedra", StringComparison.OrdinalIgnoreCase) && computadorEscolha == "Tesoura" ||
+                 jogadorEscolha.Equals("Papel", StringComparison.OrdinalIgnoreCase) && computadorEscolha == "Pedra" ||
+                 jogadorEscolha.Equals("Tesoura", StringComparison.OrdinalIgnoreCase) && computadorEscolha == "Papel")
         {
             Console.WriteLine("Você venceu!");
         }
@@ -39,5 +39,4 @@
         }
     }
 }
-
 
